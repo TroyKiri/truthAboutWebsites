@@ -9,10 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "chart.js": "^4.2.1",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "next": "13.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.7",
+    "react-simple-star-rating": "^5.1.7"
+  },
+  "devDependencies": {
+    "sass": "^1.59.3"
   }
 }

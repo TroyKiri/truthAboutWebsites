@@ -1,0 +1,186 @@
+.card {
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: #ffffff;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 34px 20px 48px 16px;
+
+  @media (min-width: 1200px) {
+    padding: 34px 26px 45px 30px;
+  }
+}
+
+.figure {
+  margin-bottom: 28px;
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    'title title'
+    'photo  wrap';
+  grid-template-columns: 87px 1fr;
+  row-gap: 10px;
+  column-gap: 17px;
+
+  @media (min-width: 1200px) {
+    margin-bottom: 22px;
+    grid-template-areas:
+      'photo title'
+      'photo  wrap';
+    grid-template-columns: 87px 1fr;
+    column-gap: 36px;
+  }
+
+  .title {
+    grid-area: title;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration-line: underline;
+    color: #000000;
+  }
+
+  .photo {
+    grid-area: photo;
+    width: 87px;
+    height: 87px;
+    border-radius: 50%;
+  }
+
+  .wrap {
+    grid-area: wrap;
+
+    .rating {
+      margin-bottom: 10px;
+
+      @media (min-width: 1200px) {
+        margin-bottom: 15px;
+      }
+
+      svg {
+        height: 18px;
+        width: 18px;
+      }
+    }
+
+    .infoWrap {
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: 1200px) {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .caption {
+        margin-bottom: 4px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000;
+
+        @media (min-width: 1200px) {
+          margin-bottom: 0;
+        }
+      }
+
+      .date {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #676767;
+      }
+    }
+  }
+}
+
+.inner {
+  @media (min-width: 1200px) {
+    width: 582px;
+    align-self: flex-end;
+  }
+}
+
+.dignity {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 30px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #09b83e;
+
+  &::before {
+    content: url("data:image/svg+xml,%3Csvg width='22' height='23' viewBox='0 0 22 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.0454 6.88303H16.0184C16.5151 5.52914 16.9982 3.53994 16.3481 1.9799C15.9649 1.05999 15.2361 0.405755 14.2406 0.088447C14.0568 0.029597 13.8657 0 13.6732 0C12.3777 0 11.2054 1.24342 9.49232 4.43543C8.72258 5.87088 7.61471 7.07954 6.83448 7.73137C6.50335 8.00806 6.23872 8.29027 6.02414 8.568C5.43258 7.70349 4.42867 7.13392 3.29175 7.13392C1.47681 7.13392 0 8.5859 0 10.3703V19.7636C0 21.5484 1.47681 23 3.29175 23C4.48398 23 5.52709 22.3712 6.10465 21.4355C6.87894 22.3743 8.05996 22.9763 9.3824 22.9763H17.4413C20.7691 22.9763 21.2658 20.8645 21.2658 19.606V11.0332C21.2662 8.74489 19.3728 6.88303 17.0454 6.88303ZM4.48328 19.7636C4.48328 20.4096 3.94877 20.9351 3.2921 20.9351C2.63508 20.9351 2.10057 20.4096 2.10057 19.7636V10.3703C2.10057 9.72435 2.63508 9.19883 3.2921 9.19883C3.94877 9.19883 4.48328 9.72435 4.48328 10.3703V19.7636ZM19.1659 19.606C19.1659 20.3703 19.042 20.9113 17.4417 20.9113H9.38275C8.21363 20.9113 7.26223 19.9763 7.26223 18.8268V11.0332L7.26503 11.0005L7.25768 10.9399C7.25558 10.9069 7.22057 10.1187 8.19438 9.30517C9.12408 8.52808 10.4413 7.094 11.35 5.39871C12.7963 2.704 13.4866 2.17986 13.6739 2.08074C14.0376 2.21427 14.2647 2.4273 14.4044 2.76251C14.857 3.84865 14.2885 5.93696 13.4932 7.43849L12.6941 8.9476H17.0451C18.2145 8.9476 19.1659 9.883 19.1659 11.0328V19.606Z' fill='%2309B83E'/%3E%3C/svg%3E%0A");
+    position: absolute;
+    left: 0;
+  }
+}
+
+.flaws {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 30px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #e3151b;
+
+  &::before {
+    content: url("data:image/svg+xml,%3Csvg width='22' height='23' viewBox='0 0 22 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.264 16.117H16.2238C16.7268 17.4709 17.2161 19.4601 16.5577 21.0201C16.1695 21.94 15.4314 22.5942 14.4231 22.9116C14.237 22.9704 14.0434 23 13.8485 23C12.5364 23 11.3491 21.7566 9.61401 18.5646C8.83441 17.1291 7.71234 15.9205 6.9221 15.2686C6.58672 14.9919 6.3187 14.7097 6.10138 14.432C5.50223 15.2965 4.48545 15.8661 3.33395 15.8661C1.49574 15.8661 0 14.4141 0 12.6297V3.2364C0 1.45163 1.49574 0 3.33395 0C4.54147 0 5.59795 0.628767 6.18292 1.56451C6.96713 0.625669 8.16329 0.0237484 9.50269 0.0237484H17.6649C21.0354 0.0237484 21.5385 2.13546 21.5385 3.39402V11.9668C21.5388 14.2551 19.6212 16.117 17.264 16.117ZM4.54076 3.2364C4.54076 2.59043 3.9994 2.06491 3.33431 2.06491C2.66887 2.06491 2.12751 2.59043 2.12751 3.2364V12.6297C2.12751 13.2757 2.66887 13.8012 3.33431 13.8012C3.9994 13.8012 4.54076 13.2757 4.54076 12.6297V3.2364ZM19.4117 3.39402C19.4117 2.62966 19.2862 2.08866 17.6653 2.08866H9.50305C8.31893 2.08866 7.35533 3.02372 7.35533 4.17318V11.9668L7.35817 11.9995L7.35072 12.0601C7.3486 12.0931 7.31314 12.8813 8.29943 13.6948C9.24105 14.4719 10.5751 15.906 11.4955 17.6013C12.9604 20.296 13.6595 20.8201 13.8492 20.9193C14.2175 20.7857 14.4476 20.5727 14.5891 20.2375C15.0475 19.1514 14.4717 17.063 13.6662 15.5615L12.8569 14.0524H17.2636C18.4481 14.0524 19.4117 13.117 19.4117 11.9672V3.39402Z' fill='%23E3151B'/%3E%3C/svg%3E%0A");
+    position: absolute;
+    left: 0;
+  }
+}
+
+.reviewText {
+  margin-top: 22px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+
+  &.hiddenText {
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 7;
+    -webkit-line-clamp: 7;
+    line-clamp: 7;
+    display: -webkit-box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+
+    @media (min-width: 1200px) {
+      -ms-line-clamp: 3;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+    }
+  }
+}
+
+.cardSingle {
+  box-shadow: unset;
+  margin-bottom: 0;
+  padding-bottom: 34px;
+}
