@@ -1,27 +1,30 @@
 .inner {
-  margin: 23px auto 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 380px;
-  width: 100%;
+  margin: 57px auto 100px;
   padding: 0 10px;
+  display: grid;
+  width: 100%;
+  max-width: 380px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'statistics'
+    'company'
+    'reviews';
 
   @media (min-width: 1200px) {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+    margin: 50px auto 100px;
     max-width: 1200px;
-    width: 100%;
-    padding: 0;
+    column-gap: 20px;
+    grid-template-columns: 760px 1fr;
+    grid-template-areas:
+      'statistics company'
+      'reviews company'
+      'reviews empty';
   }
 }
 
 .reviewsWrap {
+  grid-area: reviews;
   @media (min-width: 1200px) {
-    margin: -30px auto 0;
     max-width: 1200px;
   }
 }

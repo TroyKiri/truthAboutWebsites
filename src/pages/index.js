@@ -83,13 +83,13 @@ export default function Home() {
       </Head>
       <CommonLayout setModal={setModal}>
         <main>
-          <section className={s.inner}>
+          <div className={s.inner}>
             <Main totalRating={totalRating} reviews={reviews} filterReviews={filterReviews} activeFilterId={activeFilterId} activeCategoryId={activeCategoryId} />
             <Info totalRating={totalRating} setModal={setModal} reviews={reviews} filterReviews={filterReviews} categories={categories} rating={rating} activeCategoryId={activeCategoryId} />
-          </section>
-          <section ref={reviewsRef} className={s.reviewsWrap}>
-            <Reviews reviews={reviewsToDisplay} countToDisplay={countToDisplay} setCountOfDisplay={setCountOfDisplay} />
-          </section>
+            <section ref={reviewsRef} className={s.reviewsWrap}>
+              <Reviews reviews={reviewsToDisplay} countToDisplay={countToDisplay} setCountOfDisplay={setCountOfDisplay} />
+            </section>
+          </div>
         </main>
       </CommonLayout>
       {modal && <Modal setModal={setModal}>{modal === 'newReview' ? <NewReviewForm /> : modal === 'feedback' ? <Feedback /> : <NewCommentForm setModal={setModal} />}</Modal>}
