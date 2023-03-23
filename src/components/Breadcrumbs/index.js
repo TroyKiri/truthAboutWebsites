@@ -12,8 +12,8 @@ export default function Breadcrumbs({ review }) {
     }
 
     switch (text) {
-      case 'about':
-        return 'О нас';
+      case 'terms':
+        return 'Пользовательское соглашение';
       default:
         return;
     }

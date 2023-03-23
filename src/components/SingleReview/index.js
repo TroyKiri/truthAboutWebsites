@@ -12,12 +12,6 @@ export default function SingleReview({ review, setModal, countOfReviews }) {
           <button className={s.button} onClick={() => setModal('NewCommentForm')}>
             ответить
           </button>
-          <div className={s.linkWrap}>
-            <Link className={s.link} href="/">
-              все отзывы
-            </Link>
-            <span>{countOfReviews}</span>
-          </div>
         </div>
         {!!review?.comments?.length && (
           <div className={s.comments}>

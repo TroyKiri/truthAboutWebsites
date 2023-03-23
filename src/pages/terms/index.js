@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 
 import CommonLayout from '@/components/CommonLayout';
-import Rules from '@/components/Rules';
+import Terms from '@/components/Terms';
 import Modal from '@/components/Modal';
 import NewReviewForm from '@/components/Forms/NewReviewForm';
 import Feedback from '@/components/Forms/Feedback';
@@ -21,7 +21,7 @@ export default function RulesSection() {
       <CommonLayout setModal={setModal}>
         <main>
           <Breadcrumbs nameOfHomePage="Главная" />
-          <Rules />
+          <Terms />
         </main>
       </CommonLayout>
       {modal && <Modal setModal={setModal}>{modal === 'newReview' ? <NewReviewForm /> : modal === 'feedback' ? <Feedback /> : <h1>Комментарий</h1>}</Modal>}

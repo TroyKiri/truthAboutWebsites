@@ -12,17 +12,17 @@
     background-color: #fff;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
-    padding: 20px 20px 34px;
+    padding: 30px 20px 34px 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     @media (min-width: 1200px) {
-      padding: 30px 20px 50px;
-      max-height: 420px;
+      padding: 30px 24px 50px 23px;
     }
 
     h2 {
+      width: 100%;
       font-weight: 700;
       font-size: 24px;
       line-height: 29px;
@@ -47,7 +47,7 @@
       color: #000000;
       margin-bottom: 8px;
 
-      &:last-child {
+      &:nth-of-type(2) {
         margin: 0;
       }
 
@@ -55,6 +55,19 @@
         font-weight: 700;
         font-size: 24px;
         line-height: 29px;
+      }
+    }
+
+    .text {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: #000000;
+
+      @media (min-width: 1200px) {
+        margin-bottom: 40px;
       }
     }
 
@@ -83,11 +96,11 @@
       justify-content: center;
       padding: 0;
       list-style-type: none;
-      margin: 45px 0 0;
+      margin: 0;
 
       .link {
-        margin-right: 6px;
-        margin-bottom: 6px;
+        margin-right: 14px;
+        margin-bottom: 19px;
 
         &:last-child {
           margin-right: 0;
@@ -95,58 +108,128 @@
 
         a,
         button {
-          display: block;
+          position: relative;
+          display: flex;
+          align-items: center;
           cursor: pointer;
-          color: #000;
+          color: #676767;
           outline: none;
-          background: #eaedf2;
-          border-radius: 20px;
+          border: none;
+          background: transparent;
           font-weight: 400;
           font-size: 12px;
           line-height: 15px;
-          padding: 6px 14px;
-          border: 1px solid transparent;
+          padding: 0;
+          padding-left: 22px;
 
           &:hover,
           :focus,
           :active {
-            border: 1px solid #000;
+            color: #000;
+            text-decoration: underline;
+          }
+
+          &::before {
+            content: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.531223 10.2733C0.362974 10.1075 0.229368 9.90982 0.138172 9.69188C0.0469757 9.47394 8.46236e-06 9.24004 0 9.00379V4.50189C0 3.30792 0.474305 2.16284 1.31857 1.31857C2.16284 0.474305 3.30792 0 4.50189 0H8.99478C9.47198 0 9.93118 0.180076 10.2733 0.531223L17.4764 7.73425C17.8117 8.07165 18 8.52805 18 9.00379C18 9.47952 17.8117 9.93593 17.4764 10.2733L10.2733 17.4764C9.93593 17.8117 9.47952 18 9.00379 18C8.52805 18 8.07165 17.8117 7.73425 17.4764L0.531223 10.2733ZM16.2068 9.00379L9.00379 1.80076H4.50189C3.78551 1.80076 3.09846 2.08534 2.5919 2.5919C2.08534 3.09846 1.80076 3.78551 1.80076 4.50189V9.00379L9.00379 16.2068L16.2068 9.00379ZM4.50189 5.40227C4.2631 5.40227 4.03408 5.30741 3.86523 5.13856C3.69638 4.9697 3.60152 4.74069 3.60152 4.50189C3.60152 4.2631 3.69638 4.03408 3.86523 3.86523C4.03408 3.69638 4.2631 3.60152 4.50189 3.60152C4.74069 3.60152 4.9697 3.69638 5.13856 3.86523C5.30741 4.03408 5.40227 4.2631 5.40227 4.50189C5.40227 4.74069 5.30741 4.9697 5.13856 5.13856C4.9697 5.30741 4.74069 5.40227 4.50189 5.40227Z' fill='%23676767'/%3E%3C/svg%3E%0A");
+            position: absolute;
+            left: 0;
           }
         }
       }
 
       .linkActive {
         button {
-          border: 1px solid #000;
+          font-weight: 700;
+          text-decoration: underline;
         }
       }
     }
   }
 
+  .buttonsContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .buttonWrap {
+    background: #ffffff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 22px;
+    min-width: 170px;
+
+    @media (max-width: 379px) {
+      width: 48%;
+      min-width: unset;
+    }
+
+    @media (min-width: 1200px) {
+      padding: 26px 0 22px;
+      min-width: 190px;
+    }
+
+    .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .allReviews {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      text-decoration-line: underline;
+      color: #000000;
+      cursor: pointer;
+
+      &:hover,
+      :focus,
+      :active {
+        opacity: 0.5;
+      }
+    }
+
+    span {
+      text-decoration: none;
+      margin-left: 5px;
+      background: #f15a22;
+      border-radius: 30px;
+      padding: 2px 5px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      color: #ffffff;
+    }
+  }
+
   .button {
-    width: 100%;
-    padding: 22px 0;
-    margin-bottom: 15px;
-    background: #553fff;
+    margin-top: 15px;
+    padding: 0;
+    background: transparent;
     border-radius: 12px;
     border: none;
     outline: none;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    text-transform: uppercase;
-    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
     cursor: pointer;
-    margin-bottom: 50px;
-
-    @media (min-width: 1200px) {
-      margin: 0;
-    }
+    text-decoration-line: underline;
 
     &:hover,
     :focus,
     :active {
-      background: #7664ff;
+      opacity: 0.5;
     }
   }
 }
